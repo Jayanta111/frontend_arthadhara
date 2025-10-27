@@ -12,7 +12,6 @@ import Navbar from "./landing_page/Navbar";
 import Footer from "./landing_page/Footer";
 import Login from "./landing_page/login/Login";
 import NotFound from "./landing_page/NotFound";
-import dashboard from '../../dashboard/src/components/Home'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -20,8 +19,6 @@ root.render(
     <CookiesProvider>
     <Navbar />
     <Routes>
-    {/* Dashboard redirect */}
-    <Route path="/dashboard" element={<Home/>}/>
       <Route path="/" element={<HomePage />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/products" element={<ProductPage />} />
