@@ -42,7 +42,8 @@ function SignUp() {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          navigate("/");
+       window.location.href = "https://dashboard-arthadhara.vercel.app/";
+
         }, 1000);
       } else {
         handleError(message);

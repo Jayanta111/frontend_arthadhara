@@ -42,7 +42,7 @@ const Login = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          navigate("/dashboard");
+          window.location.href = "https://dashboard-arthadhara.vercel.app/";
         }, 1000);
       } else {
         handleError(message);
