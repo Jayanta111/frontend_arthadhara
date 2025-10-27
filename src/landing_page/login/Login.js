@@ -1,16 +1,15 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
-function SignUp() {
+
+const Login = () => {
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState({
     email: "",
     password: "",
-    username: "",
   });
-  const { email, password, username } = inputValue;
+  const { email, password } = inputValue;
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setInputValue({
@@ -25,24 +24,25 @@ function SignUp() {
     });
   const handleSuccess = (msg) =>
     toast.success(msg, {
-      position: "bottom-right",
+      position: "bottom-left",
     });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://backend-pi-gilt-mhy8gp759b.vercel.app/api/signup",
+        "https://backend-pi-gilt-mhy8gp759b.vercel.app/api/login",
         {
           ...inputValue,
         },
         { withCredentials: true }
       );
+      console.log(data);
       const { success, message } = data;
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          navigate("/");
+          navigate("/dashboard");
         }, 1000);
       } else {
         handleError(message);
@@ -54,14 +54,12 @@ function SignUp() {
       ...inputValue,
       email: "",
       password: "",
-      username: "",
     });
   };
 
   return (
-    <div className=" container  p-5 form_container">
-     
-      <h2>Signup Account</h2>
+    <div className="container form_container">
+      <h2>Login Account</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="email">Email</label>
@@ -70,16 +68,6 @@ function SignUp() {
             name="email"
             value={email}
             placeholder="Enter your email"
-            onChange={handleOnChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Username</label>
-          <input
-            type="text"
-            name="username"
-            value={username}
-            placeholder="Enter your username"
             onChange={handleOnChange}
           />
         </div>
@@ -95,7 +83,7 @@ function SignUp() {
         </div>
         <button type="submit">Submit</button>
         <span>
-          Already have an account? <Link to={"/login"}>Login</Link>
+          Already have an account? <Link to={"/signup"}>Signup</Link>
         </span>
       </form>
       <ToastContainer />
@@ -103,4 +91,4 @@ function SignUp() {
   );
 };
 
-export default SignUp;
+export default Login;

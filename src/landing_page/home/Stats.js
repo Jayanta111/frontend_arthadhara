@@ -11,8 +11,8 @@ function Stats() {
           </h1>
 
           <div className="mb-4">
-            <h2 className="fs-6 fw-bold text-dark">Customer-first always</h2>
-            <p>
+            <h2 className="fs-6 fw-semibold text-dark">Customer-first always</h2>
+            <p className="text-muted">
               That's why 1.6+ crore customers trust Arthadhara with ~ ₹2 lakh
               crores of equity investments, making us India’s largest broker;
               contributing to 15% of daily retail exchange volumes in India.
@@ -20,16 +20,16 @@ function Stats() {
           </div>
 
           <div className="mb-4">
-            <h2 className="fs-6 fw-bold text-dark">No spam or gimmicks</h2>
-            <p>
+            <h2 className="fs-6 fw-semibold text-dark">No spam or gimmicks</h2>
+            <p className="text-muted">
               No gimmicks, spam, “gamification”, or annoying push notifications.
               High-quality apps that you use at your pace, the way you like.
             </p>
           </div>
 
           <div className="mb-4">
-            <h2 className="fs-6 fw-bold text-dark">The Arthadhara universe</h2>
-            <p>
+            <h2 className="fs-6 fw-semibold text-dark">The Arthadhara universe</h2>
+            <p className="text-muted">
               Not just an app, but a whole ecosystem. Our investments in 30+
               fintech startups offer you tailored services specific to your
               needs.
@@ -37,8 +37,8 @@ function Stats() {
           </div>
 
           <div>
-            <h2 className="fs-6 fw-bold text-dark">Do better with money</h2>
-            <p>
+            <h2 className="fs-6 fw-semibold text-dark">Do better with money</h2>
+            <p className="text-muted">
               With initiatives like Nudge and Kill Switch, we don’t just
               facilitate transactions, but actively help you do better with your
               money.
@@ -47,13 +47,23 @@ function Stats() {
         </div>
 
         {/* Image Section */}
-        <div className="col-md-6 col-12 text-center">
+        <div className="col-md-6 col-12 ">
           <img
             src="media/images/ecosystem.png"
             alt="Ecosystem"
             className="img-fluid"
             style={{ maxWidth: "85%", height: "auto" }}
           />
+          <div className="text-center">
+ <a href="" className="mx-5 " style={{textDecoration:"none"}}>
+          Explore our products <i className="fa-solid fa-arrow-right"></i>
+          </a>
+  
+ <a href="" style={{textDecoration:"none"}}>
+         Try Kite demo <i className="fa-solid fa-arrow-right"></i>
+          </a>
+          </div>
+         
         </div>
       </div>
     </div>

@@ -4,9 +4,9 @@ function Hero() {
   const [hover, setHover] = useState(false);
 
   return (
-    <div className="container py-5 my-5 text-center">
+    <div className="container py-1 my-5 text-center ">
       <div className="row justify-content-center align-items-center">
-        <div className="col-md-8 col-12">
+        <div className="col-md-8 col-12 mt-5">
           {/* Banner Image */}
           <img
             src="media/images/HomeBanner.png"
@@ -16,10 +16,10 @@ function Hero() {
           />
 
           {/* Heading */}
-          <h1 className="fw-bold mb-3">Invest in everything</h1>
+          <h1 className="fw-semibold mb-3 fs-4">Invest in everything</h1>
 
           {/* Subtitle */}
-          <p className="text-muted fs-5 mb-4">
+          <p className="text-muted  mb-4">
             Online platform to invest in stocks, derivatives, mutual funds and more.
           </p>
 
@@ -32,7 +32,7 @@ function Hero() {
               fontSize: "1.1rem",
               borderRadius: "0.4rem",
               border: "none",
-              backgroundColor: hover ? "#2c7be5" : "#0d6efd", // lighter on hover
+              backgroundColor: hover ? "#0b0b0bff" : "#0d6efd", // lighter on hover
               color: "white",
               transition: "all 0.3s ease",
               boxShadow: hover ? "0 4px 10px rgba(0,0,0,0.2)" : "none",
@@ -41,7 +41,7 @@ function Hero() {
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
           >
-            Sign up for free
+            Sign up Now
           </button>
         </div>
       </div>
